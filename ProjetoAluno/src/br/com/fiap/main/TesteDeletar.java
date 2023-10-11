@@ -8,15 +8,14 @@ import br.com.fiap.beans.Aluno;
 import br.com.fiap.dao.AlunoDAO;
 
 public class TesteDeletar {
-	public static int inteiro(String message) {
-        return Integer.parseInt(JOptionPane.showInputDialog(message));
-    }
-	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+	static int inteiro(String j) {
+		return Integer.parseInt(JOptionPane.showInputDialog(j));
+	}
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Aluno objA = new Aluno();
 		AlunoDAO dao = new AlunoDAO();
 		
-		objA.setRm(inteiro("Digite o RM a ser deletado"));
-		
+		objA.setRm(inteiro("Digite o RM que deseja deletar"));
 		System.out.println(dao.deletar(objA));
 
 	}

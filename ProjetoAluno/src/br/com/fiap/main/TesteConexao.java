@@ -9,9 +9,8 @@ public class TesteConexao {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Connection c = new ConexaoFactory().conexao();
-		System.out.println("Conectado com o Banco de Dados");
+		System.out.println("Conectado com sucesso!");
 		c.close();
-
 	}
 
 }
